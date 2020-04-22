@@ -18,4 +18,5 @@ body {
 .cards {
   float: left;
   display: flex;
+  padding-left: 15rem;
 }

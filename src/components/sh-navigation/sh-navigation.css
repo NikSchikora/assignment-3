@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+.bar {
+  width: 100%;
+  height: auto;
+  background-color: #262626;
+  display: flex;
+  float: left;
+  margin-bottom: 20px;
+  padding-left: 15rem;
+}
+
+.nav-element {
+  text-align: center;
+  height: 100%;
+  padding: auto 5px;
+}
+
+p {
+  margin: 15px 15px;
+  font-family: Helvetica, sans-serif;
+  font-size: 24pt;
+  color: #fefefe;
+  font-weight: lighter;
+  transition: all 0.5s ease-in;
+  text-transform: uppercase;
+}
+
+p:hover {
+  color: palevioletred;
+  cursor: pointer;
+}
+
+#login {
+  float: right;
+}
+
+img {
+  margin-right: 20px;
+  width: 70px;
+}

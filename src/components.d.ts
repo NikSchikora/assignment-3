@@ -14,6 +14,9 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface ShNavigation {
+        "logo": string;
+    }
     interface TestComponent {
     }
 }
@@ -36,6 +39,12 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLShNavigationElement extends Components.ShNavigation, HTMLStencilElement {
+    }
+    var HTMLShNavigationElement: {
+        prototype: HTMLShNavigationElement;
+        new (): HTMLShNavigationElement;
+    };
     interface HTMLTestComponentElement extends Components.TestComponent, HTMLStencilElement {
     }
     var HTMLTestComponentElement: {
@@ -46,6 +55,7 @@ declare global {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "sh-navigation": HTMLShNavigationElement;
         "test-component": HTMLTestComponentElement;
     }
 }
@@ -57,12 +67,16 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface ShNavigation {
+        "logo"?: string;
+    }
     interface TestComponent {
     }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "sh-navigation": ShNavigation;
         "test-component": TestComponent;
     }
 }
@@ -73,6 +87,7 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "sh-navigation": LocalJSX.ShNavigation & JSXBase.HTMLAttributes<HTMLShNavigationElement>;
             "test-component": LocalJSX.TestComponent & JSXBase.HTMLAttributes<HTMLTestComponentElement>;
         }
     }
