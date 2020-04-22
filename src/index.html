@@ -25,10 +25,23 @@
   </head>
   <body>
     <sh-navigation></sh-navigation>
+    <div class="header">
+      <h1>Unsere Produktauswahl:</h1>
+      <p>Scrollen sie durch unsere Auswahl an hervorragenden Produkten</p>
+    </div>
     <div class="cards">
-      <test-component></test-component>
-      <test-component></test-component>
-      <test-component></test-component>
+      <test-component>
+        <p slot="title">Produkt 1</p>
+        <p slot="price">19,99€</p>
+      </test-component>
+      <test-component>
+        <p slot="title">Produkt 2</p>
+        <p slot="price">49,99€</p>
+      </test-component>
+      <test-component>
+        <p slot="title">Produkt 3</p>
+        <p slot="price">99,99€</p>
+      </test-component>
     </div>
   </body>
 </html>

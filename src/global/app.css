@@ -20,3 +20,23 @@ body {
   display: flex;
   padding-left: 15rem;
 }
+
+.header {
+  margin-left: 15rem;
+}
+
+.header > h1 {
+  font-size: 28pt;
+  margin-bottom: 0;
+}
+
+.header > p {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: lighter;
+  font-size: 16pt;
+}
+
+test-component {
+  margin-right: 20px;
+}

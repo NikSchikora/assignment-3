@@ -9,12 +9,20 @@ export class TestComponent implements ComponentInterface {
   render() {
     return (
       <div>
-        <h1>Test-Card</h1>
+        <h1>
+          <slot name="title" />
+        </h1>
         <img
           src="https://source.unsplash.com/random/300x200"
           alt="random image"
         />
-        <p>This is a random Image</p>
+        <p>
+          Hier könnte dann der Text / Die Beschreibung des Produktes stehen, das
+          kann auch noch über einen Slot geregelt werden
+        </p>
+        <span>
+          <slot name="price" />
+        </span>
       </div>
     );
   }

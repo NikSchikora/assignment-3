@@ -5,7 +5,7 @@
 .bar {
   width: 100%;
   height: auto;
-  background-color: #262626;
+  background-color: #ff6363;
   display: flex;
   float: left;
   margin-bottom: 20px;
@@ -19,22 +19,18 @@
 }
 
 p {
-  margin: 15px 15px;
+  margin: 20px 15px;
   font-family: Helvetica, sans-serif;
   font-size: 24pt;
-  color: #fefefe;
+  color: #202040;
   font-weight: lighter;
   transition: all 0.5s ease-in;
   text-transform: uppercase;
 }
 
 p:hover {
-  color: palevioletred;
+  color: #543864;
   cursor: pointer;
-}
-
-#login {
-  float: right;
 }
 
 img {
