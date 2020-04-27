@@ -14,7 +14,10 @@ export namespace Components {
     }
     interface AppRoot {
     }
-    interface ShopPopup {
+    interface ShNavigation {
+        "logo": string;
+    }
+    interface ShopCard {
     }
 }
 declare global {
@@ -36,17 +39,24 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
-    interface HTMLShopPopupElement extends Components.ShopPopup, HTMLStencilElement {
+    interface HTMLShNavigationElement extends Components.ShNavigation, HTMLStencilElement {
     }
-    var HTMLShopPopupElement: {
-        prototype: HTMLShopPopupElement;
-        new (): HTMLShopPopupElement;
+    var HTMLShNavigationElement: {
+        prototype: HTMLShNavigationElement;
+        new (): HTMLShNavigationElement;
+    };
+    interface HTMLShopCardElement extends Components.ShopCard, HTMLStencilElement {
+    }
+    var HTMLShopCardElement: {
+        prototype: HTMLShopCardElement;
+        new (): HTMLShopCardElement;
     };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
-        "shop-popup": HTMLShopPopupElement;
+        "sh-navigation": HTMLShNavigationElement;
+        "shop-card": HTMLShopCardElement;
     }
 }
 declare namespace LocalJSX {
@@ -57,13 +67,17 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
-    interface ShopPopup {
+    interface ShNavigation {
+        "logo"?: string;
+    }
+    interface ShopCard {
     }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
-        "shop-popup": ShopPopup;
+        "sh-navigation": ShNavigation;
+        "shop-card": ShopCard;
     }
 }
 export { LocalJSX as JSX };
@@ -73,7 +87,8 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "shop-popup": LocalJSX.ShopPopup & JSXBase.HTMLAttributes<HTMLShopPopupElement>;
+            "sh-navigation": LocalJSX.ShNavigation & JSXBase.HTMLAttributes<HTMLShNavigationElement>;
+            "shop-card": LocalJSX.ShopCard & JSXBase.HTMLAttributes<HTMLShopCardElement>;
         }
     }
 }
