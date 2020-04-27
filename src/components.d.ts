@@ -14,6 +14,8 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface ShopPopup {
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -34,10 +36,17 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLShopPopupElement extends Components.ShopPopup, HTMLStencilElement {
+    }
+    var HTMLShopPopupElement: {
+        prototype: HTMLShopPopupElement;
+        new (): HTMLShopPopupElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "shop-popup": HTMLShopPopupElement;
     }
 }
 declare namespace LocalJSX {
@@ -48,10 +57,13 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface ShopPopup {
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "shop-popup": ShopPopup;
     }
 }
 export { LocalJSX as JSX };
@@ -61,6 +73,7 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "shop-popup": LocalJSX.ShopPopup & JSXBase.HTMLAttributes<HTMLShopPopupElement>;
         }
     }
 }
