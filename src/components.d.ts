@@ -17,7 +17,7 @@ export namespace Components {
     interface ShNavigation {
         "logo": string;
     }
-    interface TestComponent {
+    interface ShopCard {
     }
 }
 declare global {
@@ -45,18 +45,18 @@ declare global {
         prototype: HTMLShNavigationElement;
         new (): HTMLShNavigationElement;
     };
-    interface HTMLTestComponentElement extends Components.TestComponent, HTMLStencilElement {
+    interface HTMLShopCardElement extends Components.ShopCard, HTMLStencilElement {
     }
-    var HTMLTestComponentElement: {
-        prototype: HTMLTestComponentElement;
-        new (): HTMLTestComponentElement;
+    var HTMLShopCardElement: {
+        prototype: HTMLShopCardElement;
+        new (): HTMLShopCardElement;
     };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
         "sh-navigation": HTMLShNavigationElement;
-        "test-component": HTMLTestComponentElement;
+        "shop-card": HTMLShopCardElement;
     }
 }
 declare namespace LocalJSX {
@@ -70,14 +70,14 @@ declare namespace LocalJSX {
     interface ShNavigation {
         "logo"?: string;
     }
-    interface TestComponent {
+    interface ShopCard {
     }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
         "sh-navigation": ShNavigation;
-        "test-component": TestComponent;
+        "shop-card": ShopCard;
     }
 }
 export { LocalJSX as JSX };
@@ -88,7 +88,7 @@ declare module "@stencil/core" {
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "sh-navigation": LocalJSX.ShNavigation & JSXBase.HTMLAttributes<HTMLShNavigationElement>;
-            "test-component": LocalJSX.TestComponent & JSXBase.HTMLAttributes<HTMLTestComponentElement>;
+            "shop-card": LocalJSX.ShopCard & JSXBase.HTMLAttributes<HTMLShopCardElement>;
         }
     }
 }
