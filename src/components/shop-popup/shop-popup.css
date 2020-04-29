@@ -1,9 +1,10 @@
 :host {
   display: block;
 }
+
 #newsletter-popup { 
   text-align: center; 
-  background: #d30000;
+  background: #878787 ;
   position: fixed;
   bottom: 10px;
   left: 1000px;
@@ -11,36 +12,42 @@
   z-index: 9999;
   font-size:14px; 
   line-height:20px;
-  padding: 20px;
-  opacity: 0.95;
+  padding: 30px;
+  opacity: 0.95;              
+  width:500px ;   
+  height: 325px;
+ border-radius: 1em 3em;  
  
   }
  
 #newsletter-popup p {
-   
-  font-family: 'Varela', sans-serif;
-  font-size: 11pt;
+  font-size: 14pt;
   font-weight: 300;
   color: rgba(255,255,255,0.8);
   margin-top: 10px;
 }
 
-#button1, #button2 {
+form button {            
   display: inline-block;
   background: #FFF;
   border-radius: 6px;
   text-decoration: none;
-  text-transform: uppercase;
   font-size: 11pt;
-  font-family: 'Varela', sans-serif;
   color: #333333;
-  margin: 10px;
+  margin-top: 20px;
+  display: flex; 
+  justify-content: center; 
 }
 
 .hinweis span {
-  font-family: 'Varela', sans-serif;
   font-size: 20pt;
   color: rgba(255,255,255,0.8);
     text-transform: uppercase;
     line-height: 40px;
+}
+.news {    
+
+   width: 64px;
+   height: 64px;
+  padding: 40px;
 }
