@@ -1,11 +1,14 @@
-import { Component, ComponentInterface, Host, h, Method } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, Method, Prop, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'shop-slideshow',
   styleUrl: 'shop-slideshow.css',
+  assetsDirs: ['images'],
   shadow: true,
 })
 export class ShopSlideshow implements ComponentInterface {
+ 
+ @Prop() pic = "pic03.jpg";
  @Method()
 
  async slideshow() {
@@ -29,7 +32,8 @@ export class ShopSlideshow implements ComponentInterface {
   render() {
     return (
       <Host>
-        <div id="sidebar"><a href="#" class="image image-full">
+        <img src={getAssetPath(`./images/${this.pic}`)}></img>
+        <div id="sidebar">
         <div class="slide">
           <img src="images/pic05.jpg" alt="" />
         </div>
@@ -37,9 +41,9 @@ export class ShopSlideshow implements ComponentInterface {
           <img src="images/pic04.jpg" alt="" />	
         </div>
         <div class="slide">
-          <img src="images/pic03.jpg" alt="" />	
+          <img src={getAssetPath(`./images/${this.pic}`)} />
         </div>
-      </a></div>
+        </div>
       </Host>
     );
   }
