@@ -11,6 +11,7 @@ export namespace Components {
         "test": () => Promise<void>;
     }
     interface ShopTeaser {
+        "image": string;
     }
 }
 declare global {
@@ -36,6 +37,7 @@ declare namespace LocalJSX {
         "image"?: string;
     }
     interface ShopTeaser {
+        "image"?: string;
     }
     interface IntrinsicElements {
         "shop-popup": ShopPopup;

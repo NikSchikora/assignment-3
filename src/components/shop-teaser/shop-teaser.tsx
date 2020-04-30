@@ -7,7 +7,7 @@ import {Prop, getAssetPath, Component, ComponentInterface, Host, h } from '@sten
   shadow: true,
 })
 export class ShopTeaser implements ComponentInterface {
-  @Prop image="nähen.png";
+  @Prop() image="nähen.png";
 
   render() {
     return (
