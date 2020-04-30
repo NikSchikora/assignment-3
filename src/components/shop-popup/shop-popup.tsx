@@ -1,11 +1,14 @@
-import { Component, ComponentInterface, Host, h, Method } from '@stencil/core';
+import { Prop, getAssetPath, Component, ComponentInterface, Host, h, Method } from '@stencil/core';
 
 @Component({
   tag: 'shop-popup',
   styleUrl: 'shop-popup.css',
+  assetsDirs: ['assets'],
   shadow: true,
 })
 export class ShopPopup implements ComponentInterface {
+@Prop() image="news.png";
+
  @Method()
  async test() {
 
@@ -18,7 +21,7 @@ export class ShopPopup implements ComponentInterface {
         <span>Sign up for our newsletter</span>  
         <p>You also recieve a 5 € Voucher!</p>    
         <div>
-         <img class ="news" src="news.png"> </img>
+        <img class ="news" src={getAssetPath(`./assets/${this.image}`)}/>
          </div>
           <form><p>
               <label>Email-Adresse:</label>
