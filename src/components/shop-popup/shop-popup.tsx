@@ -25,8 +25,9 @@ export class ShopPopup implements ComponentInterface {
          </div>
           <form><p>
               <label>Email-Adresse:</label>
-              <input id="email" required> </input>
+              <input id="email"> </input>
               <button type="submit">Send</button></p>
+              <button id="deny">No thanks!</button>
           </form>
       </div>
     </div>

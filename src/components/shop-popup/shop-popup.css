@@ -28,15 +28,16 @@
 }
 
 form button {            
-  display: inline-block;
+ 
   background: #FFF;
   border-radius: 6px;
   text-decoration: none;
   font-size: 11pt;
   color: #333333;
-  margin-top: 20px;
-  display: flex; 
-  justify-content: center; 
+  margin-top: 15px;
+  margin-left: 15px;
+
+ 
 }
 
 .hinweis span {
