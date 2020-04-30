@@ -6,12 +6,20 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ShopArticleteaser {
+    }
     interface ShopPopup {
         "image": string;
         "test": () => Promise<void>;
     }
 }
 declare global {
+    interface HTMLShopArticleteaserElement extends Components.ShopArticleteaser, HTMLStencilElement {
+    }
+    var HTMLShopArticleteaserElement: {
+        prototype: HTMLShopArticleteaserElement;
+        new (): HTMLShopArticleteaserElement;
+    };
     interface HTMLShopPopupElement extends Components.ShopPopup, HTMLStencilElement {
     }
     var HTMLShopPopupElement: {
@@ -19,14 +27,18 @@ declare global {
         new (): HTMLShopPopupElement;
     };
     interface HTMLElementTagNameMap {
+        "shop-articleteaser": HTMLShopArticleteaserElement;
         "shop-popup": HTMLShopPopupElement;
     }
 }
 declare namespace LocalJSX {
+    interface ShopArticleteaser {
+    }
     interface ShopPopup {
         "image"?: string;
     }
     interface IntrinsicElements {
+        "shop-articleteaser": ShopArticleteaser;
         "shop-popup": ShopPopup;
     }
 }
@@ -34,6 +46,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "shop-articleteaser": LocalJSX.ShopArticleteaser & JSXBase.HTMLAttributes<HTMLShopArticleteaserElement>;
             "shop-popup": LocalJSX.ShopPopup & JSXBase.HTMLAttributes<HTMLShopPopupElement>;
         }
     }
