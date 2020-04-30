@@ -1,49 +1,32 @@
-import { Component, ComponentInterface, Host, h, Method, Prop, getAssetPath } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, Prop, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'shop-slideshow',
   styleUrl: 'shop-slideshow.css',
-  assetsDirs: ['images'],
+  assetsDirs: ['assets'],
   shadow: true,
 })
 export class ShopSlideshow implements ComponentInterface {
  
- @Prop() pic = "pic03.jpg";
- @Method()
-
- async slideshow() {
-
-  var index = 0;     
-  slideshow(); 
-
-  function slideshow() {  
-      var i;  
-      var x = document.getElementsByTagName("img");   
-      for (i = 0; i < x.length; i++) {    
-      x[i].style.display = "none";    
-      }
-      index++;   
-      if (index > x.length) {index = 1}   
-      x[index-1].style.display = "block";    
-      setTimeout(slideshow, 5000); 
-  }
- }
+ @Prop() image = "pic03.jpg";
+ @Prop() image2 = "pic04.jpg";
+ @Prop() image3 = "pic05.jpg";
+ @Prop() js = "index.js";
 
   render() {
     return (
       <Host>
-        <img src={getAssetPath(`./images/${this.pic}`)}></img>
         <div id="sidebar">
         <div class="slide">
-          <img src="images/pic05.jpg" alt="" />
+          <img src={getAssetPath(`./assets/${this.image}`)}/>
         </div>
         <div class="slide">
-          <img src="images/pic04.jpg" alt="" />	
+          <img src={getAssetPath(`./assets/${this.image2}`)}/>
         </div>
         <div class="slide">
-          <img src={getAssetPath(`./images/${this.pic}`)} />
+          <img src={getAssetPath(`./assets/${this.image3}`)}/></div>
         </div>
-        </div>
+        <script src={getAssetPath(`./assets/${this.js}`)}></script>
       </Host>
     );
   }
