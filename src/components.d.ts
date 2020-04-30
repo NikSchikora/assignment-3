@@ -7,8 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ShopSlideshow {
-        "pic": string;
-        "slideshow": () => Promise<void>;
+        "image": string;
+        "image2": string;
+        "image3": string;
+        "js": string;
     }
 }
 declare global {
@@ -24,7 +26,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ShopSlideshow {
-        "pic"?: string;
+        "image"?: string;
+        "image2"?: string;
+        "image3"?: string;
+        "js"?: string;
     }
     interface IntrinsicElements {
         "shop-slideshow": ShopSlideshow;
