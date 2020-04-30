@@ -11,6 +11,7 @@ export namespace Components {
         "image2": string;
         "image3": string;
         "js": string;
+        "slideshow": () => Promise<void>;
     }
 }
 declare global {

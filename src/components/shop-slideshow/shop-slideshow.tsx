@@ -15,7 +15,7 @@ export class ShopSlideshow implements ComponentInterface {
 
  @Method()
  async slideshow() {
-
+  this.slideshow();
     var index = 0;  
     var i;  
     var x = document.getElementsByTagName("img");   
