@@ -9,12 +9,13 @@ import { Prop, getAssetPath, Component, ComponentInterface, Host, h, Method } fr
 export class ShopPopup implements ComponentInterface {
 @Prop() image="news.png";
 
- @Method()
- async test() {
 
+ test() {
+alert ("hallo");
  }
  
   render() {
+    this.test();
     return (
       <div id="newsletter-popup">
       <div class="hinweis">

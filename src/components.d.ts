@@ -8,7 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ShopPopup {
         "image": string;
-        "test": () => Promise<void>;
     }
 }
 declare global {
