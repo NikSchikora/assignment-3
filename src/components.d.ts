@@ -6,19 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ShopFooter {
+    }
 }
 declare global {
+    interface HTMLShopFooterElement extends Components.ShopFooter, HTMLStencilElement {
+    }
+    var HTMLShopFooterElement: {
+        prototype: HTMLShopFooterElement;
+        new (): HTMLShopFooterElement;
+    };
     interface HTMLElementTagNameMap {
+        "shop-footer": HTMLShopFooterElement;
     }
 }
 declare namespace LocalJSX {
+    interface ShopFooter {
+    }
     interface IntrinsicElements {
+        "shop-footer": ShopFooter;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "shop-footer": LocalJSX.ShopFooter & JSXBase.HTMLAttributes<HTMLShopFooterElement>;
         }
     }
 }

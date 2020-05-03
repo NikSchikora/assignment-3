@@ -10,7 +10,9 @@ export class ShopFooter implements ComponentInterface {
   render() {
     return (
       <Host>
-        <footer> </footer>
+        <footer> 
+          <p>Hallo</p>
+        </footer>
       </Host>
     );
   }
