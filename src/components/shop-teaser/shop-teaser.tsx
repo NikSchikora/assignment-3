@@ -9,11 +9,15 @@ import {Prop, getAssetPath, Component, ComponentInterface, Host, h } from '@sten
 export class ShopTeaser implements ComponentInterface {
   @Prop() image="nähen.jpg";
 
+  componentWillLoad() {
+alert("hallo");
+  }
+  
   render() {
     return (
       <article class="teaser">   
       <img src={getAssetPath(`./assets/${this.image}`)} />
-    <h1>Herkunft unserer Stoffe</h1>      
+    <h1><slot/></h1>      
 
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
     <button>read more</button>
