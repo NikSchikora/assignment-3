@@ -6,41 +6,19 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ShopSlideshow {
-        "image": string;
-        "image2": string;
-        "image3": string;
-        "js": string;
-        "slideshow": () => Promise<void>;
-    }
 }
 declare global {
-    interface HTMLShopSlideshowElement extends Components.ShopSlideshow, HTMLStencilElement {
-    }
-    var HTMLShopSlideshowElement: {
-        prototype: HTMLShopSlideshowElement;
-        new (): HTMLShopSlideshowElement;
-    };
     interface HTMLElementTagNameMap {
-        "shop-slideshow": HTMLShopSlideshowElement;
     }
 }
 declare namespace LocalJSX {
-    interface ShopSlideshow {
-        "image"?: string;
-        "image2"?: string;
-        "image3"?: string;
-        "js"?: string;
-    }
     interface IntrinsicElements {
-        "shop-slideshow": ShopSlideshow;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "shop-slideshow": LocalJSX.ShopSlideshow & JSXBase.HTMLAttributes<HTMLShopSlideshowElement>;
         }
     }
 }
