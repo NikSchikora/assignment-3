@@ -10,8 +10,6 @@ export namespace Components {
         "image": string;
         "image2": string;
         "image3": string;
-        "js": string;
-        "slideshow": () => Promise<void>;
     }
 }
 declare global {
@@ -30,7 +28,6 @@ declare namespace LocalJSX {
         "image"?: string;
         "image2"?: string;
         "image3"?: string;
-        "js"?: string;
     }
     interface IntrinsicElements {
         "shop-slideshow": ShopSlideshow;
