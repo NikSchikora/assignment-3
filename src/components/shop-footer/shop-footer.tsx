@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h, getAssetPath } from '@stencil/core';
+import { Component, ComponentInterface, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'shop-footer',
