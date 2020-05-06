@@ -13,8 +13,6 @@ export class ShopSlideshow implements ComponentInterface {
 @Prop() index: number = 1;
 @Prop() pictureNumber: number = 0;
 
-
-
   slideButton(i): void{
     this.slide(this.index += i);
     return i;
@@ -31,10 +29,7 @@ export class ShopSlideshow implements ComponentInterface {
     return this.pictureNumber;
   }
 
-
-
   render() {
-    
     return (
         <div class="slide">
           <button onClick = { () => this.slideButton(-1)} id="left">&lt;</button>
@@ -43,5 +38,4 @@ export class ShopSlideshow implements ComponentInterface {
         </div>
     );
   }
-
 }
