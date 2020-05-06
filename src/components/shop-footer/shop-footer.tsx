@@ -11,7 +11,7 @@ export class ShopFooter implements ComponentInterface {
     return (
       <Host>
         <footer> 
-          <p>| Lina Käfer | Niklas Schikora | Laura Krumm |</p>
+          <p><slot name="names"></slot></p>
           <a href="#">www.Kontakt.de</a> <br></br>
           <a href="#">AGB Bestimmungen</a>
         </footer>
