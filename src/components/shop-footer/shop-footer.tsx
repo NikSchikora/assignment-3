@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h } from '@stencil/core';
+import { Component, ComponentInterface, Host, h, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'shop-footer',
@@ -14,7 +14,9 @@ export class ShopFooter implements ComponentInterface {
           <p>Lina Käfer, Niklas Schikora, Laura Krumm</p>
           <a href="#">www.Kontakt.de</a> <br></br>
           <a href="#">AGB Bestimmungen</a>
-          
+          <img src={getAssetPath(`./assets/`)}/>
+          <img src={getAssetPath(`./assets/`)}/>
+          <img src={getAssetPath(`./assets/`)}/>
         </footer>
       </Host>
     );
