@@ -52,3 +52,6 @@ form button {
    height: 64px;
   padding: 40px;
 }
+#email {
+  margin-left: 10px;
+}

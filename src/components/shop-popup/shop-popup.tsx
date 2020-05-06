@@ -9,14 +9,18 @@ import { Prop, getAssetPath, Component, ComponentInterface, Host, h, Method } fr
 export class ShopPopup implements ComponentInterface {
 @Prop() image="news.png";
 
+divElement!: HTMLDivElement;
 
- test() {
-alert ("hallo");
- }
+hideItem()  {
+  this.divElement.style.display="none"; }
  
+
+
+
   render() {
-    this.test();
+  
     return (
+      <div ref={(el) => this.divElement = el as HTMLDivElement}>
       <div id="newsletter-popup">
       <div class="hinweis">
         <span>Sign up for our newsletter</span>  
@@ -26,11 +30,12 @@ alert ("hallo");
          </div>
           <form><p>
               <label>Email-Adresse:</label>
-              <input id="email"> </input>
+              <input id="email"required> </input>
               <button type="submit">Send</button></p>
-              <button id="deny">No thanks!</button>
+              <button id="deny" onClick={()=> this.hideItem()}>No thanks!</button>
           </form>
       </div>
+    </div>
     </div>
     );
   }
