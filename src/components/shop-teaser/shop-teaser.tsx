@@ -19,7 +19,7 @@ alert("hallo");
 
   }
   componentDidLoad() {
-    document.getElementById("btnpassOn").addEventListener("onclick", this.passOn);
+
   }
   
   render() {
@@ -31,7 +31,7 @@ alert("hallo");
     <h1><slot/></h1>      
 
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-    <button id="btnpassOn">read more</button>
+    <button id="btnpassOn" onClick= {() => this.passOn()}>read more</button>
   </article>   
 
     );
