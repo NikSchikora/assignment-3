@@ -37,9 +37,9 @@ export class ShopSlideshow implements ComponentInterface {
     
     return (
         <div class="slide">
-          <button onClick = { () => this.slideButton(-1)} id="left">left</button>
+          <button onClick = { () => this.slideButton(-1)} id="left">&lt;</button>
           <img src={getAssetPath(`./assets/${this.picture[this.pictureNumber]}`)}/>
-          <button onClick = { () => this.slideButton(+1)} id="right">right</button>
+          <button onClick = { () => this.slideButton(+1)} id="right">&gt;</button>
         </div>
     );
   }
