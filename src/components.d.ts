@@ -7,9 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ShopSlideshow {
-        "image": string;
-        "image2": string;
-        "image3": string;
+        "index": number;
+        "picture": Array<String>;
+        "pictureNumber": number;
     }
 }
 declare global {
@@ -25,9 +25,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ShopSlideshow {
-        "image"?: string;
-        "image2"?: string;
-        "image3"?: string;
+        "index"?: number;
+        "picture"?: Array<String>;
+        "pictureNumber"?: number;
     }
     interface IntrinsicElements {
         "shop-slideshow": ShopSlideshow;
