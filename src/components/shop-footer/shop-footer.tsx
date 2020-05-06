@@ -14,6 +14,7 @@ export class ShopFooter implements ComponentInterface {
           <p>Lina Käfer, Niklas Schikora, Laura Krumm</p>
           <a href="#">www.Kontakt.de</a> <br></br>
           <a href="#">AGB Bestimmungen</a>
+          
         </footer>
       </Host>
     );
