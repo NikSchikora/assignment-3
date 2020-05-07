@@ -6,21 +6,14 @@ import {Prop, getAssetPath, Component, ComponentInterface, Host, h } from '@sten
   assetsDirs: ['assets'],
   shadow: true,
 })
-export class ShopTeaser implements ComponentInterface {
+export class ShopTeaser {
   @Prop() image="nähen.jpg";
 
 
  passOn () {
-    window.location.href = ("https://play.google.com/store/apps?hl=de");
+    window.location.href = ("https://www.google.de");
 }
 
-  componentWillLoad() {
-alert("hallo");
-
-  }
-  componentDidLoad() {
-
-  }
   
   render() {
  
