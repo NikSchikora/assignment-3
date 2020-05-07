@@ -6,15 +6,21 @@ import { Prop, getAssetPath, Component, ComponentInterface, Host, h, Method } fr
   assetsDirs: ['assets'],
   shadow: true,
 })
-export class ShopPopup implements ComponentInterface {
+export class ShopPopup {
 @Prop() image="news.png";
 
 divElement!: HTMLDivElement;
+inputElement!: HTMLInputElement;
 
 hideItem()  {
-  this.divElement.style.display="none"; }
+  this.divElement.remove(); }
  
-
+  submitForm () {
+if (this.inputElement.value != "") {
+  this.divElement.remove();
+ 
+}
+  }
 
 
   render() {
@@ -30,8 +36,8 @@ hideItem()  {
          </div>
           <form><p>
               <label>Email-Adresse:</label>
-              <input id="email"required> </input>
-              <button type="submit">Send</button></p>
+              <input ref={(el) => this.inputElement = el as HTMLInputElement}id="email"required> </input>
+              <button onClick={()=> this.submitForm()} type="submit">Send</button></p>
               <button id="deny" onClick={()=> this.hideItem()}>No thanks!</button>
           </form>
       </div>
