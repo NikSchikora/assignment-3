@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+.card {
+  width: 10vw;
+  border: 1px solid #262626;
+  padding: 10px;
+  margin: 10px 20px;
+  transition: width 0.5s ease-in-out;
+  height: 600px;
+  overflow: hidden;
+}
+
+img {
+  width: 9vw;
+}
+
+h1 {
+  font-size: 40pt;
+  font-weight: lighter;
+  line-height: 80%;
+  margin-left: 2rem;
+}
+
+sh-infobutton {
+  padding-top: 20px;
+  text-align: center;
+  clear: both;
+}
+
+.moreInformation {
+  width: 40vw;
+}
+
+.preview-text {
+  width: 10vw;
+  padding: 0.4rem;
+}
+
+.wrapper {
+  display: flex;
+  float: left;
+}
+
+.expand {
+  border-left: solid 2px #262626;
+  margin-left: 2vw;
+  width: 20vw;
+  padding: 2rem;
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 28pt;
+}

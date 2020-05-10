@@ -1,18 +1,17 @@
-import { Component, ComponentInterface, Host, h } from '@stencil/core';
+import { Component, ComponentInterface, h } from "@stencil/core";
 
 @Component({
-  tag: 'sh-navbar',
-  styleUrl: 'sh-navbar.css',
+  tag: "sh-navbar",
+  styleUrl: "sh-navbar.css",
   shadow: true,
+  assetsDirs: ["assets"],
 })
 export class ShNavbar implements ComponentInterface {
-
   render() {
     return (
-      <Host>
+      <div class="navbar">
         <slot></slot>
-      </Host>
+      </div>
     );
   }
-
 }

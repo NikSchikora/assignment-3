@@ -6,19 +6,88 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ShCard {
+        "placeholderImage": string;
+    }
+    interface ShInfobutton {
+        "type": string;
+    }
+    interface ShLogin {
+    }
+    interface ShNavbar {
+    }
+    interface ShNavelement {
+    }
 }
 declare global {
+    interface HTMLShCardElement extends Components.ShCard, HTMLStencilElement {
+    }
+    var HTMLShCardElement: {
+        prototype: HTMLShCardElement;
+        new (): HTMLShCardElement;
+    };
+    interface HTMLShInfobuttonElement extends Components.ShInfobutton, HTMLStencilElement {
+    }
+    var HTMLShInfobuttonElement: {
+        prototype: HTMLShInfobuttonElement;
+        new (): HTMLShInfobuttonElement;
+    };
+    interface HTMLShLoginElement extends Components.ShLogin, HTMLStencilElement {
+    }
+    var HTMLShLoginElement: {
+        prototype: HTMLShLoginElement;
+        new (): HTMLShLoginElement;
+    };
+    interface HTMLShNavbarElement extends Components.ShNavbar, HTMLStencilElement {
+    }
+    var HTMLShNavbarElement: {
+        prototype: HTMLShNavbarElement;
+        new (): HTMLShNavbarElement;
+    };
+    interface HTMLShNavelementElement extends Components.ShNavelement, HTMLStencilElement {
+    }
+    var HTMLShNavelementElement: {
+        prototype: HTMLShNavelementElement;
+        new (): HTMLShNavelementElement;
+    };
     interface HTMLElementTagNameMap {
+        "sh-card": HTMLShCardElement;
+        "sh-infobutton": HTMLShInfobuttonElement;
+        "sh-login": HTMLShLoginElement;
+        "sh-navbar": HTMLShNavbarElement;
+        "sh-navelement": HTMLShNavelementElement;
     }
 }
 declare namespace LocalJSX {
+    interface ShCard {
+        "placeholderImage"?: string;
+    }
+    interface ShInfobutton {
+        "type"?: string;
+    }
+    interface ShLogin {
+    }
+    interface ShNavbar {
+    }
+    interface ShNavelement {
+    }
     interface IntrinsicElements {
+        "sh-card": ShCard;
+        "sh-infobutton": ShInfobutton;
+        "sh-login": ShLogin;
+        "sh-navbar": ShNavbar;
+        "sh-navelement": ShNavelement;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "sh-card": LocalJSX.ShCard & JSXBase.HTMLAttributes<HTMLShCardElement>;
+            "sh-infobutton": LocalJSX.ShInfobutton & JSXBase.HTMLAttributes<HTMLShInfobuttonElement>;
+            "sh-login": LocalJSX.ShLogin & JSXBase.HTMLAttributes<HTMLShLoginElement>;
+            "sh-navbar": LocalJSX.ShNavbar & JSXBase.HTMLAttributes<HTMLShNavbarElement>;
+            "sh-navelement": LocalJSX.ShNavelement & JSXBase.HTMLAttributes<HTMLShNavelementElement>;
         }
     }
 }

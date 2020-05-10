@@ -1,0 +1,48 @@
+:host {
+  display: block;
+}
+
+.container {
+  position: absolute;
+  text-align: center;
+  right: 20%;
+  margin-top: 18px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border: 2px solid, crimson;
+  border-radius: 50px;
+  background-color: crimson;
+  color: #fefefe;
+  transition: width 0.5s ease-in-out;
+  font-size: 20pt;
+}
+
+button:hover {
+  width: 150px;
+  cursor: pointer;
+}
+
+button p {
+  padding: 0;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+button:hover p {
+  opacity: 0;
+}
+
+button span {
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+button:hover span {
+  opacity: 1;
+}
