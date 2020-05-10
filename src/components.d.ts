@@ -77,6 +77,25 @@ declare namespace LocalJSX {
         "sh-login": ShLogin;
         "sh-navbar": ShNavbar;
         "sh-navelement": ShNavelement;
+    interface ShopFooter {
+    }
+}
+declare global {
+    interface HTMLShopFooterElement extends Components.ShopFooter, HTMLStencilElement {
+    }
+    var HTMLShopFooterElement: {
+        prototype: HTMLShopFooterElement;
+        new (): HTMLShopFooterElement;
+    };
+    interface HTMLElementTagNameMap {
+        "shop-footer": HTMLShopFooterElement;
+    }
+}
+declare namespace LocalJSX {
+    interface ShopFooter {
+    }
+    interface IntrinsicElements {
+        "shop-footer": ShopFooter;
     }
 }
 export { LocalJSX as JSX };
@@ -88,6 +107,7 @@ declare module "@stencil/core" {
             "sh-login": LocalJSX.ShLogin & JSXBase.HTMLAttributes<HTMLShLoginElement>;
             "sh-navbar": LocalJSX.ShNavbar & JSXBase.HTMLAttributes<HTMLShNavbarElement>;
             "sh-navelement": LocalJSX.ShNavelement & JSXBase.HTMLAttributes<HTMLShNavelementElement>;
+            "shop-footer": LocalJSX.ShopFooter & JSXBase.HTMLAttributes<HTMLShopFooterElement>;
         }
     }
 }
