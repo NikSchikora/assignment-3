@@ -20,6 +20,9 @@ export namespace Components {
     }
     interface ShopFooter {
     }
+    interface ShopPopup {
+        "image": string;
+    }
 }
 declare global {
     interface HTMLShCardElement extends Components.ShCard, HTMLStencilElement {
@@ -58,6 +61,12 @@ declare global {
         prototype: HTMLShopFooterElement;
         new (): HTMLShopFooterElement;
     };
+    interface HTMLShopPopupElement extends Components.ShopPopup, HTMLStencilElement {
+    }
+    var HTMLShopPopupElement: {
+        prototype: HTMLShopPopupElement;
+        new (): HTMLShopPopupElement;
+    };
     interface HTMLElementTagNameMap {
         "sh-card": HTMLShCardElement;
         "sh-infobutton": HTMLShInfobuttonElement;
@@ -65,6 +74,7 @@ declare global {
         "sh-navbar": HTMLShNavbarElement;
         "sh-navelement": HTMLShNavelementElement;
         "shop-footer": HTMLShopFooterElement;
+        "shop-popup": HTMLShopPopupElement;
     }
 }
 declare namespace LocalJSX {
@@ -82,6 +92,9 @@ declare namespace LocalJSX {
     }
     interface ShopFooter {
     }
+    interface ShopPopup {
+        "image"?: string;
+    }
     interface IntrinsicElements {
         "sh-card": ShCard;
         "sh-infobutton": ShInfobutton;
@@ -89,6 +102,7 @@ declare namespace LocalJSX {
         "sh-navbar": ShNavbar;
         "sh-navelement": ShNavelement;
         "shop-footer": ShopFooter;
+        "shop-popup": ShopPopup;
     }
 }
 export { LocalJSX as JSX };
@@ -101,6 +115,7 @@ declare module "@stencil/core" {
             "sh-navbar": LocalJSX.ShNavbar & JSXBase.HTMLAttributes<HTMLShNavbarElement>;
             "sh-navelement": LocalJSX.ShNavelement & JSXBase.HTMLAttributes<HTMLShNavelementElement>;
             "shop-footer": LocalJSX.ShopFooter & JSXBase.HTMLAttributes<HTMLShopFooterElement>;
+            "shop-popup": LocalJSX.ShopPopup & JSXBase.HTMLAttributes<HTMLShopPopupElement>;
         }
     }
 }
