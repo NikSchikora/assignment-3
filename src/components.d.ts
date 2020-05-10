@@ -23,6 +23,11 @@ export namespace Components {
     interface ShopPopup {
         "image": string;
     }
+    interface ShopSlideshow {
+        "index": number;
+        "picture": Array<String>;
+        "pictureNumber": number;
+    }
     interface ShopTeaser {
         "image": string;
     }
@@ -70,6 +75,12 @@ declare global {
         prototype: HTMLShopPopupElement;
         new (): HTMLShopPopupElement;
     };
+    interface HTMLShopSlideshowElement extends Components.ShopSlideshow, HTMLStencilElement {
+    }
+    var HTMLShopSlideshowElement: {
+        prototype: HTMLShopSlideshowElement;
+        new (): HTMLShopSlideshowElement;
+    };
     interface HTMLShopTeaserElement extends Components.ShopTeaser, HTMLStencilElement {
     }
     var HTMLShopTeaserElement: {
@@ -84,6 +95,7 @@ declare global {
         "sh-navelement": HTMLShNavelementElement;
         "shop-footer": HTMLShopFooterElement;
         "shop-popup": HTMLShopPopupElement;
+        "shop-slideshow": HTMLShopSlideshowElement;
         "shop-teaser": HTMLShopTeaserElement;
     }
 }
@@ -105,6 +117,11 @@ declare namespace LocalJSX {
     interface ShopPopup {
         "image"?: string;
     }
+    interface ShopSlideshow {
+        "index"?: number;
+        "picture"?: Array<String>;
+        "pictureNumber"?: number;
+    }
     interface ShopTeaser {
         "image"?: string;
     }
@@ -116,6 +133,7 @@ declare namespace LocalJSX {
         "sh-navelement": ShNavelement;
         "shop-footer": ShopFooter;
         "shop-popup": ShopPopup;
+        "shop-slideshow": ShopSlideshow;
         "shop-teaser": ShopTeaser;
     }
 }
@@ -130,6 +148,7 @@ declare module "@stencil/core" {
             "sh-navelement": LocalJSX.ShNavelement & JSXBase.HTMLAttributes<HTMLShNavelementElement>;
             "shop-footer": LocalJSX.ShopFooter & JSXBase.HTMLAttributes<HTMLShopFooterElement>;
             "shop-popup": LocalJSX.ShopPopup & JSXBase.HTMLAttributes<HTMLShopPopupElement>;
+            "shop-slideshow": LocalJSX.ShopSlideshow & JSXBase.HTMLAttributes<HTMLShopSlideshowElement>;
             "shop-teaser": LocalJSX.ShopTeaser & JSXBase.HTMLAttributes<HTMLShopTeaserElement>;
         }
     }

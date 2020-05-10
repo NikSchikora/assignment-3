@@ -1,0 +1,43 @@
+.slide {
+	position: relative;
+	width: 50%;
+	border: 4px solid lavender;
+	background-color: lavender;
+}
+
+img{
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
+
+button {
+	display: inline-block;
+    background: grey;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+button:hover {
+	background-color: white;
+	color: grey;
+	border: 2px solid lavender;
+}
+
+button:focus {
+	outline:0;
+}
+
+.slide #left {
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+
+.slide #right {
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
