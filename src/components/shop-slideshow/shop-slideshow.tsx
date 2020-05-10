@@ -9,8 +9,8 @@ import {
 @Component({
   tag: "shop-slideshow",
   styleUrl: "shop-slideshow.css",
-  assetsDirs: ["assets"],
   shadow: true,
+  assetsDirs: ["assets"],
 })
 export class ShopSlideshow implements ComponentInterface {
   @Prop() picture: Array<String> = [
