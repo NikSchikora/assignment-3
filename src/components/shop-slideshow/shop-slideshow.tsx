@@ -9,7 +9,7 @@ import { Component, ComponentInterface, h, Prop, getAssetPath } from '@stencil/c
 export class ShopSlideshow implements ComponentInterface {
  
 
-@Prop() picture: Array<String> = ["pic03.jpg", "pic04.jpg", "pic05.jpg"];
+@Prop() picture: Array<String> = ["pic03.jpg", "pic04.jpg", "pic05.jpg", "pic06.jpg", "pic07.jpg"];
 @Prop() index: number = 1;
 @Prop() pictureNumber: number = 0;
 
