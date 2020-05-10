@@ -17,6 +17,7 @@ export namespace Components {
     interface ShNavbar {
     }
     interface ShNavelement {
+        "link": string;
     }
     interface ShopFooter {
     }
@@ -111,6 +112,7 @@ declare namespace LocalJSX {
     interface ShNavbar {
     }
     interface ShNavelement {
+        "link"?: string;
     }
     interface ShopFooter {
     }

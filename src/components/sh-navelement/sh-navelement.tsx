@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Host, h } from "@stencil/core";
+import { Component, ComponentInterface, Host, Prop, h } from "@stencil/core";
 
 @Component({
   tag: "sh-navelement",
@@ -6,13 +6,19 @@ import { Component, ComponentInterface, Host, h } from "@stencil/core";
   shadow: true,
 })
 export class ShNavelement implements ComponentInterface {
-  getLink(slotName: string) {
+  @Prop() link: string;
+
+  getLink(slotName: string): string {
     return slotName.replace(/\s/g, "") + ".html";
+  }
+
+  redirect(): void {
+    window.location.href = this.link;
   }
 
   render() {
     return (
-      <a href="">
+      <a onClick={() => this.redirect()}>
         <slot />
       </a>
     );
