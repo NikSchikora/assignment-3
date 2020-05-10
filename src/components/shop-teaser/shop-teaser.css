@@ -1,0 +1,51 @@
+:host {
+  display: block;
+}
+
+.teaser {
+   
+  background-color: #eee;
+  width: 300px;  
+  height: 400px ;    
+  border-radius: 1em 3em;    
+  background-color: #878787 	;   
+  padding: 20px;
+
+}   
+
+  h1 {
+   text-align: center;
+   font-size: 20px;     
+   margin-left: 20px;
+   margin-right: 20px;   
+   margin-top: 30px;  
+   margin-bottom: -20px;
+   line-height: 25px; 
+   color: rgba(255,255,255,0.8);
+   text-transform: uppercase;
+  }
+ article p {     
+     
+   text-align: center;   
+   margin: 30px;
+   line-height: 25px; 
+   font-size: 14px;         
+   color: white;}
+
+button {        
+   display: block;
+   margin-left: auto;
+   margin-right: auto; 
+   border-radius: 6px;
+   font-size: 12pt;
+   color: #333333;
+ }
+img {  
+   width: 210px; 
+   height: 139px; 
+   display: block;
+   margin-left: auto;
+   margin-right: auto;        
+   border-radius: 1em 3em;  
+
+}     
