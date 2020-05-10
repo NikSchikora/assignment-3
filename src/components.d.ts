@@ -18,6 +18,8 @@ export namespace Components {
     }
     interface ShNavelement {
     }
+    interface ShopFooter {
+    }
 }
 declare global {
     interface HTMLShCardElement extends Components.ShCard, HTMLStencilElement {
@@ -50,12 +52,19 @@ declare global {
         prototype: HTMLShNavelementElement;
         new (): HTMLShNavelementElement;
     };
+    interface HTMLShopFooterElement extends Components.ShopFooter, HTMLStencilElement {
+    }
+    var HTMLShopFooterElement: {
+        prototype: HTMLShopFooterElement;
+        new (): HTMLShopFooterElement;
+    };
     interface HTMLElementTagNameMap {
         "sh-card": HTMLShCardElement;
         "sh-infobutton": HTMLShInfobuttonElement;
         "sh-login": HTMLShLoginElement;
         "sh-navbar": HTMLShNavbarElement;
         "sh-navelement": HTMLShNavelementElement;
+        "shop-footer": HTMLShopFooterElement;
     }
 }
 declare namespace LocalJSX {
@@ -71,30 +80,14 @@ declare namespace LocalJSX {
     }
     interface ShNavelement {
     }
+    interface ShopFooter {
+    }
     interface IntrinsicElements {
         "sh-card": ShCard;
         "sh-infobutton": ShInfobutton;
         "sh-login": ShLogin;
         "sh-navbar": ShNavbar;
         "sh-navelement": ShNavelement;
-    interface ShopFooter {
-    }
-}
-declare global {
-    interface HTMLShopFooterElement extends Components.ShopFooter, HTMLStencilElement {
-    }
-    var HTMLShopFooterElement: {
-        prototype: HTMLShopFooterElement;
-        new (): HTMLShopFooterElement;
-    };
-    interface HTMLElementTagNameMap {
-        "shop-footer": HTMLShopFooterElement;
-    }
-}
-declare namespace LocalJSX {
-    interface ShopFooter {
-    }
-    interface IntrinsicElements {
         "shop-footer": ShopFooter;
     }
 }
