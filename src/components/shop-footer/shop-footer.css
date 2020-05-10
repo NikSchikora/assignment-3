@@ -6,7 +6,7 @@ footer {
   padding-top: 40px;
   padding-bottom: 50px;
   border-top: 4px solid lavender;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 18;
   text-align: center;
   position: absolute;
@@ -14,15 +14,16 @@ footer {
   left: 0;
   width: 100%;
   height: auto;
-  background-color: lightgrey;
-  
+  background-color: #262626;
+  color: #fff;
 }
 
 footer p {
-  font-weight: 600;
+  font-weight: lighter;
+  font-size: 16pt;
 }
 
 footer a {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }

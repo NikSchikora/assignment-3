@@ -26,3 +26,12 @@ body {
   display: flex;
   float: left;
 }
+
+shop-popup {
+  clear: both;
+  text-align: right;
+}
+
+shop-teaser {
+  clear: both;
+}
