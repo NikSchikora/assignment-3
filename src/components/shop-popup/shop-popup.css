@@ -4,7 +4,7 @@
 
 #newsletter-popup {
   text-align: center;
-  background: #878787;
+  background: #035aa6;
   position: fixed;
   bottom: 2%;
   right: 10%;
@@ -20,33 +20,43 @@
 }
 
 #newsletter-popup p {
-  font-size: 14pt;
+  font-weight: lighter;
+  font-size: 18pt;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   margin-top: 10px;
 }
 
 form button {
-  background: #fff;
+  outline: solid 1px #fff;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 11pt;
-  color: #333333;
+  font-size: 14pt;
+  color: #fff;
   margin-top: 15px;
   margin-left: 15px;
+  border-radius: 0;
+  background-color: transparent;
+  transition: background-color 0.5s ease-out;
 }
 
+.btn:hover {
+  cursor: pointer;
+  background-color: #79bac1;
+}
 .hinweis span {
+  font-weight: lighter;
   font-size: 20pt;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   text-transform: uppercase;
   line-height: 40px;
 }
 .news {
   width: 64px;
   height: 64px;
-  padding: 35px;
+  padding: 20px;
 }
+
 #email {
   margin-left: 10px;
 }

@@ -42,11 +42,15 @@ export class ShopPopup {
                 >
                   {" "}
                 </input>
-                <button onClick={() => this.submitForm()} type="submit">
+                <button
+                  class="btn"
+                  onClick={() => this.submitForm()}
+                  type="submit"
+                >
                   Send
                 </button>
               </p>
-              <button id="deny" onClick={() => this.hideItem()}>
+              <button class="btn" id="deny" onClick={() => this.hideItem()}>
                 No thanks!
               </button>
             </form>

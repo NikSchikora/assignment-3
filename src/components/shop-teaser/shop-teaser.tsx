@@ -33,9 +33,10 @@ export class ShopTeaser {
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua.{" "}
         </p>
-        <button id="btnpassOn" onClick={() => this.passOn()}>
-          read more
-        </button>
+
+        <sh-infobutton type="outline" onClick={() => this.passOn()}>
+          Read more
+        </sh-infobutton>
       </article>
     );
   }

@@ -11,8 +11,11 @@ button {
   text-align: center;
   padding: 10px 25px;
   text-transform: uppercase;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: #79bac1;
 }

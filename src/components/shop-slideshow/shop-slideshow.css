@@ -1,46 +1,45 @@
 .slide {
-	position: relative;
-	width: 100%;
-	height: 300px;
-	border: 4px solid lavender;
-	background-color: lavender;
-	overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: lavender;
+  overflow: hidden;
+  box-shadow: 5px 6px 30px -8px rgba(0, 0, 0, 0.51);
 }
 
-img{
-	text-align: center;
-	width: 100%;
-	height: auto;
+img {
+  text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 button {
-	border: 0 solid;
-	display: inline-block;
-    background: grey;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 12px;
+  border: 0 solid;
+  display: inline-block;
+  background: grey;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
 }
 
 button:hover {
-	background-color: white;
-	color: grey;
-	border: 2px solid lavender;
+  background-color: white;
+  color: grey;
 }
 
 button:focus {
-	outline:0;
+  outline: 0;
 }
 
 .slide #left {
-	position: absolute;
-	top: 50%;
-	left: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
 .slide #right {
-	position: absolute;
-	top: 50%;
-	right: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
 }

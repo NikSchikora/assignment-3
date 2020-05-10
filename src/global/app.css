@@ -16,13 +16,22 @@ body {
   /*Colors*/
 }
 
+sh-navbar {
+  z-index: 200;
+}
+
+shop-slider {
+  z-index: 1;
+}
+
 .center {
   width: 70%;
   margin: 0 auto;
+  margin-top: 7rem;
 }
 
 .wrapper {
-  margin-top: 6rem;
+  margin-top: 3rem;
   display: flex;
   float: left;
 }
@@ -32,6 +41,11 @@ shop-popup {
   text-align: right;
 }
 
-shop-teaser {
+.clear {
   clear: both;
+}
+
+h1 {
+  font-weight: lighter;
+  font-size: 40pt;
 }

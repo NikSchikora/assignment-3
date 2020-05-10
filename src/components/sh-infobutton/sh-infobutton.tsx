@@ -25,6 +25,9 @@ export class ShInfobutton implements ComponentInterface {
         case "buy":
           this.button.style.backgroundColor = "#ffe75e";
           break;
+        case "outline":
+          this.button.style.border = "solid 1px #fff";
+          break;
         default:
           this.button.style.backgroundColor = "#79bac1";
       }
